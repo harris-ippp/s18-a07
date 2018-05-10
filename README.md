@@ -75,7 +75,7 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
     Hint: The fatalities can be strings like `'13 (2 passengers, 1 crew, 10 on ground)'`. We'll assume that the first number in each string is the total number of fatalities and use a regex to extract it. 
 
-    Write a function called `get_first_number(text)` that uses a regular expression to return the first number in `text`. If the text is `None` (missing) or contains no numbers, return `None`. Apply this to `df['Fatalities']`.
+    Write a function called `get_first_number(text)` that takes a string and uses a regular expression to return the first number in it. If the text is null or contains no numbers, return `None`. You can check if `text` is null using the `pd.isnull()` function. Apply this to `df['Fatalities']`.
 
 3. Find the flight accident with the most fatalities. (2 points)
 
