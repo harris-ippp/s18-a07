@@ -59,7 +59,7 @@ There are many different ways to perform this scraping. Here is an outline of on
     ```python
     >>> pd.DataFrame([{'a':1, 'b':2}, 
                       {'a':3, 'b':4}])
-    a  b
+       a  b
     0  1  2
     1  3  4
     ```
