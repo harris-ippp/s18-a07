@@ -66,9 +66,7 @@ There are many different ways to perform this scraping. Here is an outline of ho
     1  3  4
     ```
     
-    You'll also want to call `drop_duplicates()` on your DataFrame because there are a few accidents that have multiple links in the original list.
-
-3. Write your results to a CSV file called `accidents.csv`.
+    You'll also want to call `drop_duplicates()` on your DataFrame because there are a few accidents that have multiple links in the original list. Finally, write your results to a CSV file called `accidents.csv`.
 
 ## B: Analyze
 Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](TODO/accidents.csv). Thus you can get partial credit by proceeding with those results.
@@ -87,6 +85,6 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
 4. Which air operator with the most fatalities. Hint: Use `groupby`. (4 points)
     
-5. Make a histogram of accident years.
+5. Make a histogram of accident years. (4 points)
 
     Hint: Some of the dates are missing or formatted poorly so you can pass the argument `errors='coerce'` to [`pd.to_datetime()`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html) to simply convert them to `NaT` ("Not a Time",  the equivalent for times of `NaN` for numbers).
