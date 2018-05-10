@@ -65,7 +65,7 @@ There are many different ways to perform this scraping. Here is an outline of on
     You'll also want to call `drop_duplicates()` on your DataFrame because there are a few accidents that were linked multiple times in the original list article. Finally, write your results to a CSV file called `accidents.csv`.
 
 ## B: Analyze
-Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](TODO/accidents.csv). Thus you can get partial credit by proceeding with those results.
+Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](https://raw.githubusercontent.com/harris-ippp/s18-a07/master/accidents.csv). Thus you can get partial credit by proceeding with those results.
 
 1. What is the most common origin for the flight accidents? (2 points)
 
