@@ -67,9 +67,9 @@ There are many different ways to perform this scraping. Here is an outline of on
 ## B: Analyze
 Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](https://raw.githubusercontent.com/harris-ippp/s18-a07/master/accidents.csv). Thus you can get partial credit by proceeding with those results.
 
-1. What is the most common origin for the flight accidents? (2 points)
+1. What is the most common origin for accidents and how many accidents have originated there? (2 points)
 
-2. Which operator has the most accidents? (2 points)
+2. Which operator has had the most accidents and how many? (2 points)
 
 3. Extract the number of fatalities from each accident into a column called `'Fatalities count'`. Save this as `accidents2.csv` for use below. (4 points)
 
@@ -77,9 +77,9 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
     Write a function called `get_first_number(text)` that takes a string and uses a regular expression to return the first number in it. If the text is null or contains no numbers, return `None`. You can check if `text` is null using the `pd.isnull()` function. Apply this to `df['Fatalities']`.
 
-3. Which accident with the most fatalities? (2 points)
+3. Which flight had the most fatalities and how many? (2 points)
 
-4. Which air operator has the most fatalities? Hint: Use `groupby`. (4 points)
+4. Which air operator has had the most fatalities and how many? Hint: Use `groupby`. (4 points)
     
 5. Make a line plot where the x axis the year and the y axis is the number of accidents in that year. Save it as `years.png`. (4 points)
 
