@@ -57,7 +57,9 @@ There are many different ways to perform this scraping. Here is an outline of on
 5. Turn that list of dictionaries into a DataFrame simply by passing it to `pd.DataFrame()`. This is an alternative way to construct a DataFrame, e.g.:
 
     ```python
-    >>> pd.DataFrame([{'a':1, 'b':2}, {'a':3, 'b':4}])   a  b
+    >>> pd.DataFrame([{'a':1, 'b':2}, 
+                      {'a':3, 'b':4}])
+    a  b
     0  1  2
     1  3  4
     ```
