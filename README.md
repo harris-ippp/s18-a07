@@ -1,5 +1,5 @@
 # Assignment 7: Web Scraping
-In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q3.py`.
+In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q6.py`.
 
 ## A: Scrape
 Here we will write code to scrape the list of flights along with the following characteristics for each flight (located in the "infobox" on the right of each accident's page):
@@ -81,6 +81,6 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
 4. Which air operator with the most fatalities. Hint: Use `groupby`. (4 points)
     
-5. Make a histogram of accident years. (4 points)
+5. Make a line plot where the x axis the year and the y axis is the number of accidents in that year. Save it as `years.png`. (4 points)
 
     Hint: Some of the dates are missing or formatted poorly so you can pass the argument `errors='coerce'` to [`pd.to_datetime()`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html) to simply convert them to `NaT` ("Not a Time",  the equivalent for times of `NaN` for numbers).
