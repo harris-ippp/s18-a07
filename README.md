@@ -52,7 +52,7 @@ There are many different ways to perform this scraping. Here is an outline of on
     
     Put this code into a function calld `get_table_data(a_page, header)` that takes as its argument an accident page and the name of a header (e.g. `'Date'`, `'Flight origin'`, etc.) and returns the corresponding value. Not every page has every piece of data. In those cases `get_data()` can just return `None`. To identify these cases you can check if the result of your `find('th', text=header)` `is None`.
     
-    Finally, iterate over the different header names and get each piece of data and put it into a dictionary. Append that dictionary to a big list of dictionaries, one for each accident.
+    Finally, iterate over the different header names and get each piece of data and put it into a dictionary. Append that dictionary to a big list of dictionaries, one for each accident. I recommend testing this process on a single accident page first and then on a small number before scraping all 1000+ accidents.
     
 5. Turn that list of dictionaries into a DataFrame simply by passing it to `pd.DataFrame()`. This is an alternative way to construct a DataFrame, e.g.:
 
