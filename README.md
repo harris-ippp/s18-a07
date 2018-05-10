@@ -1,5 +1,5 @@
 # Assignment 7: Web Scraping
-In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q6.py`.
+In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q6.py`. Put the answers to questions 1,2,4, and 5 in a file called `ANSWERS.txt`.
 
 ## A: Scrape
 Here we will write code to scrape the list of flights along with the following characteristics for each flight (located in the "infobox" on the right of each accident's page):
@@ -77,9 +77,9 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
     Write a function called `get_first_number(text)` that takes a string and uses a regular expression to return the first number in it. If the text is null or contains no numbers, return `None`. You can check if `text` is null using the `pd.isnull()` function. Apply this to `df['Fatalities']`.
 
-3. Find the flight accident with the most fatalities. (2 points)
+3. Which accident with the most fatalities? (2 points)
 
-4. Which air operator with the most fatalities. Hint: Use `groupby`. (4 points)
+4. Which air operator has the most fatalities? Hint: Use `groupby`. (4 points)
     
 5. Make a line plot where the x axis the year and the y axis is the number of accidents in that year. Save it as `years.png`. (4 points)
 
