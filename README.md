@@ -1,5 +1,5 @@
 # Assignment 7: Web Scraping
-In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q3.py`.
+In this assignment we will use `requests` and `BeautifulSoup` to scrape Wikipedia's [List of accidents and incidents involving commercial aircraft](https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft) and analyze the data. Put your scraping code in a script called `scrape.py` and put your solutions to part B in scripts called `q1.py,...,q6.py`. Put the answers to questions 1,2,4, and 5 in a file called `ANSWERS.txt`.
 
 ## A: Scrape
 Here we will write code to scrape the list of flights along with the following characteristics for each flight (located in the "infobox" on the right of each accident's page):
@@ -57,7 +57,9 @@ There are many different ways to perform this scraping. Here is an outline of on
 5. Turn that list of dictionaries into a DataFrame simply by passing it to `pd.DataFrame()`. This is an alternative way to construct a DataFrame, e.g.:
 
     ```python
-    >>> pd.DataFrame([{'a':1, 'b':2}, {'a':3, 'b':4}])   a  b
+    >>> pd.DataFrame([{'a':1, 'b':2}, 
+                      {'a':3, 'b':4}])
+       a  b
     0  1  2
     1  3  4
     ```
@@ -65,11 +67,11 @@ There are many different ways to perform this scraping. Here is an outline of on
     You'll also want to call `drop_duplicates()` on your DataFrame because there are a few accidents that were linked multiple times in the original list article. Finally, write your results to a CSV file called `accidents.csv`.
 
 ## B: Analyze
-Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](TODO/accidents.csv). Thus you can get partial credit by proceeding with those results.
+Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](https://raw.githubusercontent.com/harris-ippp/s18-a07/master/accidents.csv). Thus you can get partial credit by proceeding with those results.
 
-1. What is the most common origin for the flight accidents? (2 points)
+1. What is the most common origin for accidents and how many accidents have originated there? (2 points)
 
-2. Which operator has the most accidents? (2 points)
+2. Which operator has had the most accidents and how many? (2 points)
 
 3. Extract the number of fatalities from each accident into a column called `'Fatalities count'`. Save this as `accidents2.csv` for use below. (4 points)
 
@@ -77,10 +79,10 @@ Now we will analyze the data from A. In case you have trouble getting your scrap
 
     Write a function called `get_first_number(text)` that takes a string and uses a regular expression to return the first number in it. If the text is null or contains no numbers, return `None`. You can check if `text` is null using the `pd.isnull()` function. Apply this to `df['Fatalities']`.
 
-3. Find the flight accident with the most fatalities. (2 points)
+3. Which flight had the most fatalities and how many? (2 points)
 
-4. Which air operator with the most fatalities. Hint: Use `groupby`. (4 points)
+4. Which air operator has had the most fatalities and how many? Hint: Use `groupby`. (4 points)
     
-5. Make a histogram of accident years. (4 points)
+5. Make a line plot where the x axis the year and the y axis is the number of accidents in that year. Save it as `years.png`. (4 points)
 
     Hint: Some of the dates are missing or formatted poorly so you can pass the argument `errors='coerce'` to [`pd.to_datetime()`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html) to simply convert them to `NaT` ("Not a Time",  the equivalent for times of `NaN` for numbers).
