@@ -69,7 +69,7 @@ There are many different ways to perform this scraping. Here is an outline of on
 ## B: Analyze
 Now we will analyze the data from A. In case you have trouble getting your scraper to work, I have posted the the data [here](https://raw.githubusercontent.com/harris-ippp/s18-a07/master/accidents.csv). Thus you can get partial credit by proceeding with those results.
 
-1. What is the most common origin for accidents and how many accidents have originated there? (2 points)
+1. What is the most common origin for accidents and how many accidents have originated there? (2 points) (Note: the origin names on Wikipedia are messy so a naive count will not be accurate. However, you need not clean them up to receive full credit for this problem.)
 
 2. Which operator has had the most accidents and how many? (2 points)
 
